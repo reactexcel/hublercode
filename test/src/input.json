@@ -1,0 +1,196 @@
+{
+  "success": true,
+  "result": [
+    {
+      "_id": "63f4c0b9f7fb2a83c647e275",
+      "type": "configuration",
+      "configuration": [
+        {
+          "_id": "first_name",
+          "label": "First Name",
+          "required": true,
+          "type": "text",
+          "minLength": 3,
+          "maxLength": 25
+        },
+        {
+          "_id": "last_name",
+          "label": "Last Name",
+          "required": false,
+          "type": "text",
+          "minLength": 3,
+          "maxLength": 25
+        },
+        {
+          "_id": "age",
+          "label": "Age",
+          "required": true,
+          "type": "number",
+          "min": 10,
+          "max": 95
+        },
+        {
+          "_id": "gender",
+          "label": "Gender",
+          "required": true,
+          "type": "dropdown",
+          "multi-select": false,
+          "options": [
+            {
+              "_id": "male",
+              "label": "Male"
+            },
+            {
+              "_id": "female",
+              "label": "Female"
+            },
+            {
+              "_id": "others",
+              "label": "Others"
+            }
+          ]
+        },
+        {
+          "_id": "address",
+          "label": "Address",
+          "required": false,
+          "type": "paragraph",
+          "maxLength": 250
+        },
+        {
+          "_id": "email",
+          "label": "Email",
+          "required": true,
+          "type": "email",
+          "repeating": false,
+          "unique": false
+        },
+        {
+          "_id": "phone",
+          "type": "number",
+          "label":"Phone",
+          "required": true,
+          "repeating": false,
+          "unique": false
+        },
+        {
+          "_id": "marital_status",
+          "label": "Marital Status",
+          "required": false,
+          "type": "dropdown",
+          "multi-select": false,
+          "options": [
+            {
+              "_id": "single",
+              "label": "Single"
+            },
+            {
+              "_id": "married",
+              "label": "Married"
+            },
+            {
+              "_id": "rather_not_say",
+              "label": "Rather not say"
+            }
+          ]
+        },
+        {
+          "_id": "hobbies",
+          "label": "Hobbies",
+          "required": false,
+          "type": "dropdown",
+          "multi-select": true,
+          "options": [
+            {
+              "_id": "reading",
+              "label": "Reading"
+            },
+            {
+              "_id": "dancing",
+              "label": "Dancing"
+            },
+            {
+              "_id": "singing",
+              "label": "Singing"
+            },
+            {
+              "_id": "travelling",
+              "label": "Travelling"
+            },
+            {
+              "_id": "cooking",
+              "label": "Cooking"
+            },
+            {
+              "_id": "playing",
+              "label": "Playing"
+            },
+            {
+              "_id": "coding",
+              "label": "Coding"
+            },
+            {
+              "_id": "meditating",
+              "label": "Meditating"
+            },
+            {
+              "_id": "other",
+              "label": "Others"
+            }
+          ]
+        },
+        {
+          "_id": "products",
+          "label": "Products",
+          "required": true,
+          "type": "repeating",
+          "fields": [
+            {
+              "_id": "product_name",
+              "label": "Product Name",
+              "type": "text",
+              "required": true
+            },
+            {
+              "_id": "sku",
+              "label": "Stock Keeping Unit (SKU)",
+              "type": "text",
+              "required": true
+            },
+            {
+              "_id": "price",
+              "label": "Price per Qty",
+              "type": "number",
+              "required": true
+            },
+            {
+              "_id": "quantity",
+              "label": "Quantity",
+              "type": "text",
+              "required": true
+            },
+            {
+              "_id": "total",
+              "label": "Total Amount",
+              "type": "formula",
+              "formula": [
+                {
+                  "type": "field",
+                  "value": "price"
+                },
+                {
+                  "type": "operator",
+                  "value": "*"
+                },
+                {
+                  "type": "field",
+                  "value": "quantity"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
