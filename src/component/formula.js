@@ -50,7 +50,6 @@ function Formula({ options, label, dispatch }) {
               </div>
             );
           })}
-
           <>Total={formula(" ")}</>
         </div>
       </div>

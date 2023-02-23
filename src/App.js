@@ -4,18 +4,24 @@ import { Fragment, useEffect, useReducer, useState } from "react";
 import Input from "./component/input";
 import Dropdown from "./component/dropdown";
 import Repeating from "./component/repeating";
+import TableData from "./component/tableData";
+import BasicDetails from "./component/basicDetails";
 const initalState = {};
 const reducer = (state, action) => {
   return { ...state, [action.type]: action.data };
 };
 function App() {
   const [state, dispatch] = useReducer(reducer, initalState);
+  const [tableData,setTableData]=useState([])
   const fieldTypes = ["repeating", "dropdown"];
 
   const buttonHandler = (e) => {
     e.preventDefault();
     postData(state);
+    // getTableData()
   };
+
+ 
 
   const postData = (state) => {
     console.log(state, "state");
@@ -27,12 +33,19 @@ function App() {
       headers: {
         "Content-type": "application/json; charset=UTF-8",
       },
-    }).then((response) => response.json());
+    }).then((response) => response.json())
+    .then((data)=>{
+      if(data.success){
+       setTableData(prevState=>[...prevState,data.result.state])
+
+      }
+    })
   };
+  console.log(tableData, "tableData");
 
   return (
     <div className="App">
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      {/* <div style={{ display: "flex", flexDirection: "column" }}>
         <form onSubmit={buttonHandler}>
           {input.result[0].configuration.map((i, index) => {
             return (
@@ -75,6 +88,11 @@ function App() {
           
         </form>
       </div>
+      <div className="table">
+          <TableData tableData={tableData}/>
+      </div> */}
+      <BasicDetails/>
+
     </div>
   );
 }
