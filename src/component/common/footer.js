@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="mt-2 ml-30  bg-gray-100 border-t-2 border-solid flex justify-between flex-row border-gray-200 ">
+    <div className="fixed bottom-0 right-0 w-[84%] mt-2 ml-30  bg-gray-100 border-t-2 border-solid flex justify-between flex-row border-gray-200 ">
       <button
         type="button"
         class="text-white ml-10 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"

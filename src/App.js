@@ -4,7 +4,6 @@ import { Fragment, useEffect, useReducer, useState } from "react";
 import Input from "./component/input";
 import Dropdown from "./component/dropdown";
 import Repeating from "./component/repeating";
-import TableData from "./component/tableData";
 import BasicDetails from "./component/basicDetails";
 const initalState = {};
 const reducer = (state, action) => {
@@ -41,7 +40,6 @@ function App() {
       }
     })
   };
-  console.log(tableData, "tableData");
 
   return (
     <div className="App">
@@ -88,9 +86,7 @@ function App() {
           
         </form>
       </div>
-      <div className="table">
-          <TableData tableData={tableData}/>
-      </div> */}
+        */}
       <BasicDetails/>
 
     </div>
