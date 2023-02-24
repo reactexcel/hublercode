@@ -7,10 +7,10 @@ function ProgressBar(props) {
     <div>
       <aside
         id="default-sidebar"
-        className="absolute   left-0 z-40 w-64 border-r-2 border-solid border-gray-300 h-full transition-transform -translate-x-full sm:translate-x-0"
+        className="fixed   left-0 z-0 w-64 border-r-2 border-solid border-gray-300 h-full transition-transform -translate-x-full sm:translate-x-0"
         aria-label="Sidebar"
       >
-        <div class="h-full w-500 border border-r-2 border-solid px-3 py-4 overflow-y-auto bg-gray-100 dark:bg-gray-800">
+        <div class="h-full mt-14 w-500 border border-r-2 border-solid px-3 py-4 overflow-y-auto bg-gray-100 dark:bg-gray-800">
           <div className="ml-8 ">
             <h5 class="text-x flex flex-start font-medium dark:text-white">
               New Landlord Progress

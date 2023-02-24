@@ -4,7 +4,7 @@ function BasicDetailForm(props) {
   const {BasicDetails}=props
 const typeValue =["text", "email","number"]
   return (
-    <div className="ml-10 mt-5 h-full   ">
+    <div className="ml-10 mt-10 h-full   ">
       <h3 className="text-xl flex flex-start font-bold dark:text-white ">
         Basic details
       </h3>

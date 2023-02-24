@@ -42,8 +42,7 @@ function App() {
   };
 
   return (
-    <div className="App">
-      {/* <div style={{ display: "flex", flexDirection: "column" }}>
+   <>      {/* <div style={{ display: "flex", flexDirection: "column" }}>
         <form onSubmit={buttonHandler}>
           {input.result[0].configuration.map((i, index) => {
             return (
@@ -88,8 +87,9 @@ function App() {
       </div>
         */}
       <BasicDetails/>
+      </>
 
-    </div>
+
   );
 }
 

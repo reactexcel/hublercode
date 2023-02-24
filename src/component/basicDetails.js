@@ -133,14 +133,15 @@ function BasicDetails() {
     })
   }
   return (
-    <div>
-      <div>
+  
+      <div className="flex flex-col h-screen">
         <HeadingTitle />
-        <div className="flex flex-row  ">
-          <div className="basis-1/6">
+        <div className="flex flex-row h-full">
+          <div className="basis-1/6 h-full">
             <ProgressBar progress={progress} progressHandler={progressHandler} num={num} />
           </div>
-          <div className="basis-5/6">
+          <div className="basis-5/6 h-full mt-10">
+            <div className="h-full overflow-scroll ">
             {count==0? 
             <BasicDetailForm  BasicDetails={BasicDetails}/>: count==1?
             <TaxDetails bac taxInput={taxInput}/>:
@@ -148,13 +149,12 @@ function BasicDetails() {
             <DocumentUpload DocumentDetail={DocumentDetail}/>:
             <ReviewDetails BasicDetails={BasicDetails} BankDetail={BankDetail} taxInput={taxInput} DocumentDetail={DocumentDetail} />
             }
-            
+            </div>
             <Footer/>
           </div>
         </div>
       </div>
-      <div></div>
-    </div>
+
   );
 }
 

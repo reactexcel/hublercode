@@ -12,7 +12,8 @@ function ReviewDetails(props) {
 
           
   return (
-    <div className="h-full mb-80 overflow-auto  ">
+    <div className="h-full mb-8 overflow-auto  ">
+      <div>
       <h3 className="text-xl mt-10 flex ml-10 flex-start font-bold dark:text-white ">
         Review
       </h3>
@@ -87,6 +88,7 @@ function ReviewDetails(props) {
           <PdfDocument />
           <PdfDocument />
         </div>
+      </div>
       </div>
       </div>
     </div>
